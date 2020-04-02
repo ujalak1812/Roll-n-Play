@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        
+        <title>Roll n Play</title>
+    </head>
+    <body>
+        <!-- The Modal -->
+        <div id="Modal" class="modal">
+            <span class="close">
+                <i>
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                </i>
+            </span>
+            <div class="modal-content rules">
+                <h1>Rules</h1>
+                <p>
+                    <ul>
+                        <span class="differentiator">
+                            In case of 1 dice
+                        </span>
+                        <br><br>
+                        <li>If the player rolls a 1, all his round score gets lost. After that, it's the next player's turn</li>
+                        <li>Player looses his entire score when he rolls two 6 in a row. After that, it's the next player's turn.</li>
+                        <br><br><br>
+                        <span class="differentiator">In case of 2 dice</span><br><br>
+                        <li>Player looses his current score when one of the two dice is 1.</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="modal-content guidelines">
+                <h1>How To Play</h1>
+                <p>
+                    <ul>
+                        <li>The game has 2 players, playing in rounds</li>
+                        <li>You can choose number of dice (either 1 or 2, by default 1)</li>
+                        <li>In each turn, You are supposed to roll dice by clicking on <span>Roll Dice</span> button as many times as you wish and each result will be added to your round score</li>
+                        <li>You can choose to <span>Hold</span>, which means that your round score will be added to your global score. After that, it's the next player's turn</li>
+                        <li>The deafult winning score is 100, you can set your own</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        <!-- side panel -->
+        <div class="side-panel">
+            <img src="logo.png" class="logo" alt="logo">
+            <button class="button-side-panel btn-guidelines">
+                <i>
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                </i>
+                How To Play
+            </button>
+            <button class="button-side-panel btn-rules">
+                <i>
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                </i>
+                Rules
+            </button>
+            <h1 class="dice-num heading-style">Choose Dice</h1>
+            <div class="num-dice-select">
+                <div class="options">
+                    <input type="radio" name="option" id="one" class="checked" value="1" checked>1<br>
+                    <input type="radio" name="option" id="two" value="2">2
+                </div>
+            </div>
+            <h1 class="win-score heading-style">Final Score</h1>
+            <input type="text" placeholder="Final Score" class="winning-score" value="100">
+        </div>
+        <!-- game panel -->
+        <div class="wrapper clearfix">
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">Player 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+            </div>
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">Player 2</div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">Current</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+            <button class="button-game btn-new">
+                <i>
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                </i>
+                New game
+            </button>
+            <button class="button-game btn-roll">
+                <i>
+                    <ion-icon name="reload-outline"></ion-icon>
+                </i>
+                Roll dice
+            </button>
+            <button class="button-game btn-hold">
+                <i>
+                    <ion-icon name="save-outline"></ion-icon>
+                </i>
+                Hold
+            </button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
+            <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
+
+        </div>
+        <script src="app.js"></script>
+        <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    </body>
+</html>

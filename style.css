@@ -1,0 +1,336 @@
+/*    GENERAL STYLING    */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23000000' fill-opacity='0.04'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-family: Lato;
+    font-weight: 400;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wrapper, .modal {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: #fff; 
+}
+
+button {
+    position: absolute;
+    width: 200px;
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover { 
+    font-weight: 700; 
+}
+
+button:hover i { 
+    margin-right: 20px; 
+}
+
+button:focus {
+    outline: none;
+}
+
+i {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+    line-height: 1;
+}
+
+ion-icon {
+    color: #EB4D4D;
+    font-size: 30px;
+    --ionicon-stroke-width: 18px;
+}
+
+.num-dice-select {
+    position: absolute;
+    ledt: 2%;
+    top: 400px;
+    width: 200px;
+    height: 70px;
+    font-size: 14px;
+}
+
+.options {
+    margin-bottom: 5px;
+    font-size: 22px;
+    cursor: pointer;
+    
+}
+
+.options input{
+    width: 50px;
+}
+
+/*    SIDE PANEL    */
+
+.side-panel {
+    width: 250px;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    transform: translate(-4%, -50%);
+    border: 1px solid floralwhite;
+    overflow: hidden;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+}
+
+.button-side-panel {
+    left: 2%;
+    transform: translateX(-2%);
+    text-align: left;
+}
+
+.btn-guidelines { 
+    top: 260px;
+}
+.btn-rules { 
+    top: 300px; 
+}
+
+.modal {
+    display: none;
+    height: 600px;
+    z-index: 1;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    width: 90%; 
+}
+
+.modal-content h1{
+    text-align: center;
+    color: #EB4D4D;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.differentiator{
+    font-size: 20px;
+    font-weight: 600;
+    color: #EB4D4D;
+    margin: auto 50px;
+}
+
+.modal-content li{
+    list-style: square;
+    font-size: 16.5px;
+    font-weight: 500;
+    line-height: 2em;
+    margin: auto 50px;
+}
+
+.modal-content li span {
+    color: #EB4D4D;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.rules, .guidelines {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.close {
+  position: absolute;
+  top: 5%;
+  left: 95%;
+}
+
+.close:hover,
+.close:focus {
+  cursor: pointer;
+}
+
+.heading-style {
+    position: absolute;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #EB4D4D;
+}
+
+.dice-num, .win-score{
+    font-size: 20px;
+}
+
+.dice-num {
+    top: 370px;
+}
+
+.win-score {
+    top: 490px;
+}
+
+.winning-score {
+    position: absolute;
+    left: 2%;
+    top: 520px;
+    color: #555;
+    font-size: 14px;
+    font-family: 'Lato';
+    text-align: center;
+    padding: 10px;
+    width: 200px;
+    text-transform: uppercase;
+}
+
+.winning-score:focus { outline: none; }
+
+/*    GAME PANEL    */
+
+.wrapper {
+    overflow: hidden;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+}
+
+.player-0-panel,
+.player-1-panel {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+/*    PLAYERS    */
+
+.player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 200;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 200;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+
+.active { background-color: #f7f7f7; }
+.active .player-name { font-weight: 400; }
+
+.active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+    
+}
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+}
+
+.player-current-score {
+    font-size: 30px;
+}
+
+.button-game {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-new { 
+    top: 45px;
+}
+
+.btn-roll { 
+    top: 403px;
+}
+
+.btn-hold { 
+    top: 467px;
+}
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+/* Challenge 3: Add another dice to the game, so that there are two dices now. The player looses his current score when one of them is a 1 */
+#dice-1 { top: 120px; }
+#dice-2 { top: 250px; }
+
+.winner { 
+    background-color: #f7f7f7; 
+}
+
+.winner .player-name { 
+    font-weight: 400; 
+    color: #EB4D4D; 
+}
+
+
+
+
+
