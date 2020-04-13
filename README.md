@@ -1,6 +1,6 @@
 # Roll-n-Play
 
-A fun dice rolling game made using JavaScript
+A fun dice rolling game made using JavaScript DOM Manipulation
 
 HOW TO PLAY
 - The game has 2 players, playing in rounds
