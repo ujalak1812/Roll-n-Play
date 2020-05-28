@@ -19,4 +19,4 @@
 - Player looses his current score when one of the two dice is 1.
 
 ***Check out the demo here***
-[Roll n Play](https://ujalak1812.github.io/Roll-n-Play/)
+[Roll n Play](https://rollnplay.netlify.app/)
